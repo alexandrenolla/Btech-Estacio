@@ -1,7 +1,7 @@
+'''
 #Definindo um vetor
 from numpy import array
 notas_real = array([2, 5, 10, 20, 50, 100, 200], dtype=int)
-'''
 #Acessando os dados do vetor pelo índice
 print(notas_real[1])
 print(notas_real[5])
@@ -25,14 +25,28 @@ print(cadeiras[0][0])
 #Alterando um elemento da matriz
 cadeiras[0][0] = 'italiano'
 print(cadeiras[0][0])
-#Iterando a matriz
-#listas da matriz
+#Iterando a matriz:
+#1. Iterando as listas da matriz
 for vetor in cadeiras:
     print(vetor)
-    #elementos das listas
+    #2. Iterando os elementos das listas
     for elemento in vetor:
         print(elemento)
-        #letras dos elementos
+        #3. Iterando as letras dos elementos
         for i in elemento:
             print(i)
+'''
+'''
+#Imprimindo a diagonal principal da matriz
+from numpy import array
+matriz = array([[1, 2, 3], [4, 5, 6], [7, 8, 9]], dtype=int)
+aux_linha = 0
+aux_coluna = 0
+for linha in matriz:
+    for elemento in linha:
+        if aux_linha == aux_coluna:
+            print(elemento)
+        aux_coluna += 1
+    aux_linha += 1
+    aux_coluna = 0
 '''
