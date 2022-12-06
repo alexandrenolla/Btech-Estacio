@@ -8,3 +8,4 @@ for i in range(0, len(lista) + 1):
         conversor = list(combination)
         resultado.append(conversor)
 print(resultado)
+
