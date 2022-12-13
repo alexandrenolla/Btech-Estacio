@@ -46,7 +46,7 @@ class Grafico:
     def __init__(self, eixox, eixoy):
         self.eixoX = eixox
         self.eixoY = eixoy
-
+        self.
 
 
 
