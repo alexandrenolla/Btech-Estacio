@@ -1,17 +1,21 @@
-#  Implementar um programa orientado a objetos para visualizar e aplicar regressão
-#  linear em séries temporais
+'''
+- Implementar um programa orientado a objetos para visualizar e aplicar regressão linear em séries temporais
+
+1• objetivo: Aplicar as técnicas de: programação orientada a objetos, manipulação de dicionários e comandos iterativos para produção de gráficos no Python e para obter regressão linear de uma série temporal
+
+2• objetivo: Entrar com listas de despesas por dia e o programa deve produzir: gráficos com visualização das séries temporais de despesas; gráfico com a regressão linear da série temporal.
+
+Resultados esperados:
+- Entrada dos dados
+- Classe de despesas
+- Classe de gráficos
+- Apresentação de saída, que são as visualizações dos gráficos de linhas e de regressão linear.
+'''
 
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+import numpy as np
 
-alimentacao = {
-    1: 50, 2: 30, 3: 150, 4: 100, 5: 30, 6: 80, 7: 50
-}
-transporte = {
-    1: 20, 2: 30, 3: 50, 4: 20, 5: 20, 6: 50, 7: 0
-}
-vestuario = {
-    1: 300, 2: 0, 3: 0, 4: 50, 5: 0, 6: 0, 7: 0
-}
 
 
 class Despesas:
@@ -38,6 +42,31 @@ class Despesas:
     def getVestuario(self, vestuario):
         return vestuario
 
+class Grafico:
+    def __init__(self, eixox, eixoy):
+        self.eixoX = eixox
+        self.eixoY = eixoy
+
+
+
+
+
+
+
+
+
+
+
+'''
+alimentacao = {
+    1: 50, 2: 30, 3: 150, 4: 100, 5: 30, 6: 80, 7: 50
+}
+transporte = {
+    1: 20, 2: 30, 3: 50, 4: 20, 5: 20, 6: 50, 7: 0
+}
+vestuario = {
+    1: 300, 2: 0, 3: 0, 4: 50, 5: 0, 6: 0, 7: 0
+}
 
 x = [1, 2, 3, 4, 5, 6, 7] # dias
 y = [50, 30, 150, 100, 30, 80, 50] # alimentacao
@@ -52,6 +81,6 @@ plt.title('Gráfico de despesas', color='black', fontsize=16)
 plt.xlabel('Dias')
 plt.ylabel('Despesa em R$')
 plt.show()
-
+'''
 
 

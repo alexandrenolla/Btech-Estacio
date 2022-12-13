@@ -1,3 +1,16 @@
+'''
+Implementar um programa para manipular dados de um arquivo texto e visualizá-los em um
+histograma e nuvem de palavras.
+
+1• objetivo: Gerar dados de testes
+2• objetivo: Gravar e recuperar dados de arquivos de textos
+3• objetivo: Manipular os dados para visualizá-los em um histograma
+4• objetivo: Manipular os dados para visualizá-los em uma nuvem de palavras
+5• objetivo: Implementar um programa para gerar dados com nomes de pessoas e respectrivas pontuações,
+gravar em um arquivo, recuperar os dados do arquivo, visualizar os dados das pontuações das pessoas
+em um histograma e em uma nuvem de palavras
+'''
+
 # Importação de bibliotecas:
 import wordcloud
 import num2words
@@ -7,8 +20,10 @@ from faker import Faker
 # Geração dos dados:
 # Declarando a varíavel para utilização dos métodos faker
 fake = Faker('pt_BR')
+
 # Declarando o dicionário que conterá os elementos
 dicionario = {}
+
 # Iterando uma criação de 10 nomes e 10 numéros de 1 a 10
 for i in range(10):
   nome = fake.name()
@@ -48,8 +63,7 @@ print(numeros)
 
 # Imprimindo o histograma a partir dos dados da lista de inteiros
 # Usando a biblioteca matplotlib.pylplot
-
-num_bins=25; plt.hist(numeros, num_bins, density=True, facecolor='blue', alpha=0.75)
+num_bins = 25; plt.hist(numeros, num_bins, density=True, facecolor='blue', alpha=0.75)
 
 plt.xlabel('Valores')
 plt.ylabel('Probabilidade')
