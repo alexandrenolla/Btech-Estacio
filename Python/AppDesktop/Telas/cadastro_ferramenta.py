@@ -84,9 +84,26 @@ def botao_cadastrar():
 def botao_cancelar():
     janelaCadastroFerramenta.destroy()
 
+# Cores
+corPreta = "#2e2d2b"
+corBranca = "#feffff"
+corVerde = "#8EB897"
+corLetra = "#403d3d"
+corCinza = "#e9edf5"
+corBorda = "#82A0BC"
 
 # Criando a janela
 janelaCadastroFerramenta = Tk()
+janelaCadastroFerramenta.title('Ferramentaria')
+janelaCadastroFerramenta.configure(background=corCinza)
+janelaCadastroFerramenta.resizable(width=FALSE, height=FALSE)
+janelaCadastroFerramenta.geometry("800x500")
+
+# Título Cadastro técnico
+frame_titulo = Frame(master=janelaCadastroFerramenta, width=800, height=60, bg=corBranca, relief=FLAT)
+frame_titulo.place(x=0, y=20)
+label_titulo = Label(master=frame_titulo, text="CADASTRAR FERRAMENTA", bg=corBranca, fg=corLetra, font="Verdana 18 bold")
+label_titulo.place(x=300, y=15)
 
 # Atribuindo a função a uma variável que servirá de parâmetro para o método de validação
 vcmd_descricao = janelaCadastroFerramenta.register(func=limitar_caractere_descricao)
@@ -112,77 +129,70 @@ vcmd_tipo = janelaCadastroFerramenta.register(func=limitar_caratere_tipo)
 # Atribuindo a função a uma variável que servirá de parâmetro para o método de validação
 vcmd_material = janelaCadastroFerramenta.register(func=limitar_caratere_material)
 
-# Título da janela
-janelaCadastroFerramenta.title('Cadastro de Ferramentas')
-
-# Tamanho da janela
-janelaCadastroFerramenta.minsize(width=300, height=300)
-janelaCadastroFerramenta.resizable(width=FALSE, height=FALSE)
-
 # Campo da Descrição da janela
-label_descricao_cadastro_ferramenta = Label(text='Descrição:')
-label_descricao_cadastro_ferramenta.grid(row=1, column=0, padx=10, pady=10, sticky='nswe', columnspan=4)
-entry_descricao_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_descricao, '%P'))
-entry_descricao_cadastro_ferramenta.grid(row=1, column=4, padx=10, pady=10, sticky='nswe', columnspan=4)
+label_descricao_cadastro_ferramenta = Label(text='DESCRIÇÃO', bg=corCinza, fg=corLetra, font="Verdana 12 bold")
+label_descricao_cadastro_ferramenta.place(x=140, y=120)
+entry_descricao_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_descricao, '%P'), font="Verdana 9 bold", bg=corBranca, highlightbackground=corBorda, fg=corLetra, justify="left", width=45)
+entry_descricao_cadastro_ferramenta.place(x=300, y=120)
 
 # Campo do Part Number da ferramenta
-label_number_cadastro_ferramenta = Label(text='Part Number:')
-label_number_cadastro_ferramenta.grid(row=2, column=0, padx=10, pady=10, sticky='nswe', columnspan=4)
-entry_number_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_number, '%P'))
-entry_number_cadastro_ferramenta.grid(row=2, column=4, padx=10, pady=10, sticky='nswe', columnspan=4)
+label_number_cadastro_ferramenta = Label(text='PART NUMBER', bg=corCinza, fg=corLetra, font="Verdana 12 bold")
+label_number_cadastro_ferramenta.place(x=140, y=160)
+entry_number_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_number, '%P'), font="Verdana 9 bold", bg=corBranca, highlightbackground=corBorda, fg=corLetra, justify="left", width=45)
+entry_number_cadastro_ferramenta.place(x=300, y=160)
 
 # Campo do Fabricante da ferramenta
-label_fabricante_cadastro_ferramenta = Label(text='Fabricante:')
-label_fabricante_cadastro_ferramenta.grid(row=3, column=0, padx=10, pady=10, sticky='nswe', columnspan=4)
-entry_fabricante_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_fabricante, '%P'))
-entry_fabricante_cadastro_ferramenta.grid(row=3, column=4, padx=10, pady=10, sticky='nswe', columnspan=4)
+label_fabricante_cadastro_ferramenta = Label(text='FABRICANTE', bg=corCinza, fg=corLetra, font="Verdana 12 bold")
+label_fabricante_cadastro_ferramenta.place(x=140, y=200)
+entry_fabricante_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_fabricante, '%P'), font="Verdana 9 bold", bg=corBranca, highlightbackground=corBorda, fg=corLetra, justify="left", width=45)
+entry_fabricante_cadastro_ferramenta.place(x=300, y=200)
 
 # Campo da Voltagem da ferramenta
-label_voltagem_cadastro_ferramenta = Label(text='Voltagem:')
-label_voltagem_cadastro_ferramenta.grid(row=4, column=0, padx=10, pady=10, sticky='nswe', columnspan=4)
-entry_voltagem_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_voltagem, '%P'))
-entry_voltagem_cadastro_ferramenta.grid(row=4, column=4, padx=10, pady=10, sticky='nswe', columnspan=4)
+label_voltagem_cadastro_ferramenta = Label(text='VOLTAGEM', bg=corCinza, fg=corLetra, font="Verdana 12 bold")
+label_voltagem_cadastro_ferramenta.place(x=140, y=240)
+entry_voltagem_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_voltagem, '%P'), font="Verdana 9 bold", bg=corBranca, highlightbackground=corBorda, fg=corLetra, justify="left", width=45)
+entry_voltagem_cadastro_ferramenta.place(x=300, y=240)
 
 # Campo do Tamanho da ferramenta
-label_tamanho_cadastro_ferramenta = Label(text='Tamanho:')
-label_tamanho_cadastro_ferramenta.grid(row=5, column=0, padx=10, pady=10, sticky='nswe', columnspan=4)
-entry_tamanho_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_tamanho, '%P'))
-entry_tamanho_cadastro_ferramenta.grid(row=5, column=4, padx=10, pady=10, sticky='nswe', columnspan=4)
+label_tamanho_cadastro_ferramenta = Label(text='TAMANHO', bg=corCinza, fg=corLetra, font="Verdana 12 bold")
+label_tamanho_cadastro_ferramenta.place(x=140, y=280)
+entry_tamanho_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_tamanho, '%P'), font="Verdana 9 bold", bg=corBranca, highlightbackground=corBorda, fg=corLetra, justify="left", width=45)
+entry_tamanho_cadastro_ferramenta.place(x=300, y=280)
 
 # Campo da Unidade de medida da ferramenta
-label_medida_cadastro_ferramenta = Label(text='Unidade de Medida:')
-label_medida_cadastro_ferramenta.grid(row=6, column=0, padx=10, pady=10, sticky='nswe', columnspan=4)
-entry_medida_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_medida, '%P'))
-entry_medida_cadastro_ferramenta.grid(row=6, column=4, padx=10, pady=10, sticky='nswe', columnspan=4)
+label_medida_cadastro_ferramenta = Label(text='UNIDADE DE MEDIDA', bg=corCinza, fg=corLetra, font="Verdana 12 bold")
+label_medida_cadastro_ferramenta.place(x=140, y=320)
+entry_medida_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_medida, '%P'), font="Verdana 9 bold", bg=corBranca, highlightbackground=corBorda, fg=corLetra, justify="left", width=45)
+entry_medida_cadastro_ferramenta.place(x=300, y=320)
 
 # Campo do Tipo da ferramenta
-label_tipo_cadastro_ferramenta = Label(text='Tipo:')
-label_tipo_cadastro_ferramenta.grid(row=7, column=0, padx=10, pady=10, sticky='nswe', columnspan=4)
-entry_tipo_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_tipo, '%P'))
-entry_tipo_cadastro_ferramenta.grid(row=7, column=4, padx=10, pady=10, sticky='nswe', columnspan=4)
+label_tipo_cadastro_ferramenta = Label(text='TIPO', bg=corCinza, fg=corLetra, font="Verdana 12 bold")
+label_tipo_cadastro_ferramenta.place(x=140, y=360)
+entry_tipo_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_tipo, '%P'), font="Verdana 9 bold", bg=corBranca, highlightbackground=corBorda, fg=corLetra, justify="left", width=45)
+entry_tipo_cadastro_ferramenta.place(x=300, y=360)
 
 # Campo do Material da ferramenta
-label_material_cadastro_ferramenta = Label(text='Material:')
-label_material_cadastro_ferramenta.grid(row=8, column=0, padx=10, pady=10, sticky='nswe', columnspan=4)
-entry_material_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_material, '%P'))
-entry_material_cadastro_ferramenta.grid(row=8, column=4, padx=10, pady=10, sticky='nswe', columnspan=4)
+label_material_cadastro_ferramenta = Label(text='MATERIAL', bg=corCinza, fg=corLetra, font="Verdana 12 bold")
+label_material_cadastro_ferramenta.place(x=140, y=400)
+entry_material_cadastro_ferramenta = Entry(janelaCadastroFerramenta, validate='key', validatecommand=(vcmd_material, '%P'), font="Verdana 9 bold", bg=corBranca, highlightbackground=corBorda, fg=corLetra, justify="left", width=45)
+entry_material_cadastro_ferramenta.place(x=300, y=400)
 
 # Campo do Tempo máximo de reserva da ferramenta
 '''
 lista_tempo_ferramenta = [1, 2, 4, 6, 8, 12, 24, 48, 72]
-label_tempo_ferramenta = Label(text='Tempo máximo de reserva (horas):')
-label_tempo_ferramenta.grid(row=8, column=0, padx=10, pady=10, sticky='nswe', columnspan=4)
+label_tempo_ferramenta = Label(text='TEMPO MÁXIMO DA RESERVA (HORAS)')
+label_tempo_ferramenta.place(
 combobox_tempo_ferramenta = Combobox(values=lista_tempo_ferramenta)
-combobox_tempo_ferramenta.grid(row=8, column=4, padx=10, pady=10, sticky='nswe', columnspan=4)
+combobox_tempo_ferramenta.place(
 '''
 
 # Botão de cancelar
-botao_cancelar_ferramenta = Button(text='Cancelar', command=botao_cancelar)
-botao_cancelar_ferramenta.grid(row=9, column=0, padx=10, pady=10, sticky='nswe', columnspan=4)
+botao_cancelar_ferramenta = Button(text='CANCELAR', font="Verdana 9 bold", highlightbackground=corBorda, fg=corLetra,  height=2, width=15, command=botao_cancelar)
+botao_cancelar_ferramenta.place(x=300, y=440)
 
 # Botão de confirmação
-botao_cadastrar_ferramenta = Button(text='Cadastrar', command=botao_cadastrar)
-botao_cadastrar_ferramenta.grid(row=9, column=4, padx=10, pady=10, sticky='nswe', columnspan=4)
+botao_cadastrar_ferramenta = Button(text='CADASTRAR', font="Verdana 9 bold", highlightbackground=corVerde, fg=corLetra,  height=2, width=15, command=botao_cadastrar)
+botao_cadastrar_ferramenta.place(x=485, y=440)
 
 # Impressão da tela
 janelaCadastroFerramenta.mainloop()
