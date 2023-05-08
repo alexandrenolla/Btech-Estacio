@@ -1,0 +1,84 @@
+/* FONTS */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+
+/* BODY */
+body{
+    background-color: #F7FFF7;
+    font-family: 'Quicksand', sans-serif;
+    overflow-y: auto;
+}
+
+
+/* NAVBAR */
+span.navbar-brand {
+    padding-left: 15px;
+    color: #1A535C;
+}
+#main_navbar,
+#main_navbar span.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+ul.navbar-nav{
+    margin-left: 17px;
+}
+li.nav-item{
+    margin-right: 17px;
+    font-size: 20px;
+}
+#main_navbar a.nav-link {
+    color: white;
+}
+#main_navbar a.nav-link:hover {
+    color: #1A535C;
+}
+#main_navbar{
+    background-color: #4ECDC4;
+}
+/* BUTTON TOGGLER */
+button.navbar-toggler {
+    border: 3px solid rgba(255, 255, 255, 0.477);
+    margin-right: 15px;
+}
+button.navbar-toggler:hover {
+    border: 3px solid #1A535C;
+}
+
+
+/* HEADER e MAIN */
+header{
+    height: 60px;
+    margin-top: 80px;
+}
+header, main{
+    text-align: center;
+    
+}
+img.logo{
+    height: 50px;
+    margin: 50px auto 40px auto;
+}
+main{
+    line-height: 2.5em;
+    margin-top: 150px;
+    height: calc(100vh - 100px);
+}
+
+/* FOOTER */
+footer{
+    background-color: #4ECDC4;
+    text-align: center;
+    height: 25px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+}
+footer p{
+    padding-top: 3.5px;
+    font-size: 13px;
+}
+
+

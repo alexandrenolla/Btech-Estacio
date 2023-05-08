@@ -1,0 +1,14 @@
+body{
+    padding: 30px;
+}
+
+input#valor, button#add, div#selectOpcoes{ 
+    display: block;
+}
+
+form, div#selectOpcoes{
+    margin: 15px 0px 15px 0px;
+}
+
+
+    

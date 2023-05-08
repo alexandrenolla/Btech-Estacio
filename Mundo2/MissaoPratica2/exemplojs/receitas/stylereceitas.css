@@ -1,0 +1,39 @@
+/* MAIN */
+html, body, div#main{ 
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* DIVS */
+div.d-flex.flex-wrap.pnlCatalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.d-flex.flex-wrap.pnlCatalogo:first-of-type{
+    margin-left: 150px;
+}
+
+div.d-flex.flex-wrap.pnlCatalogo:last-child{
+    margin-right: 170px;
+
+}
+
+.card{
+    margin-top: 80px; 
+    width: 250px;
+}
+
+div.card ul{
+    margin-top: 16px;
+    margin-left: 32px;
+    font-size: 14px;
+}
+
+div.card p{
+    text-align: justify;
+    padding: 8px;
+    font-size: 14px;
+}
