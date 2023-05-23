@@ -12,7 +12,7 @@ export default class ControleEditora {
     }
 
   public static getNomeEditora(codEditora: number): string {
-    const editora = editoras.filter(e => e.codEditora === codEditora)[0];
+    const editora = editoras.filter(e => e.codigoEditora === codEditora)[0];
     return editora ? editora.nome : '';
   }
 }

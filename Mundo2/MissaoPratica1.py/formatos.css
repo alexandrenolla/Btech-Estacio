@@ -5,7 +5,7 @@
 
 /* BODY */
 body{
-    background-color: #F7FFF7;
+    background-color: rgb(224, 152, 10);
     font-family: 'Quicksand', sans-serif;
     overflow-y: auto;
 }
@@ -35,7 +35,8 @@ li.nav-item{
     color: #1A535C;
 }
 #main_navbar{
-    background-color: #4ECDC4;
+    color: #F7FFF7;
+    background-color: #000000;
 }
 /* BUTTON TOGGLER */
 button.navbar-toggler {
@@ -68,7 +69,8 @@ main{
 
 /* FOOTER */
 footer{
-    background-color: #4ECDC4;
+    color: #F7FFF7;
+    background-color: #000000;
     text-align: center;
     height: 25px;
     bottom: 0;

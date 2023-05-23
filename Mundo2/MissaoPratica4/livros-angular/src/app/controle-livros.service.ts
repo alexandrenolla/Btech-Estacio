@@ -10,23 +10,23 @@ export class ControleLivrosService {
     {
       codigo: 1,
       codEditora: 1,
-      titulo: "Livro 1",
-      resumo: "Resumo do Livro 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed luctus nulla. Donec mollis, velit id ultricies commodo, quam nulla lobortis tortor, ac faucibus eros ex non sapien.",
-      autores: ["José Silva", "Ana Maria dos Santos"]
+      titulo: "Livro A",
+      resumo: "Resumo do Livro A. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed luctus nulla. Donec mollis, velit id ultricies commodo, quam nulla lobortis tortor, ac faucibus eros ex non sapien.",
+      autores: ["João Euclides", " Maria da Rosa"]
     },
     {
       codigo: 2,
       codEditora: 2,
-      titulo: "Livro 2",
-      resumo: "Resumo do Livro 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed luctus nulla. Donec mollis, velit id ultricies commodo, quam nulla lobortis tortor, ac faucibus eros ex non sapien.",
-      autores: ["Silvia Rodrigues", "Marilene José"]
+      titulo: "Livro B",
+      resumo: "Resumo do Livro B. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed luctus nulla. Donec mollis, velit id ultricies commodo, quam nulla lobortis tortor, ac faucibus eros ex non sapien.",
+      autores: ["Clementina leidiane", "Artur Vieira"]
     },
     {
       codigo: 3,
       codEditora: 3,
-      titulo: "Livro 3",
-      resumo: "Resumo do Livro 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed luctus nulla. Donec mollis, velit id ultricies commodo, quam nulla lobortis tortor, ac faucibus eros ex non sapien.",
-      autores: ["José Silva", "Karine Lopes"]
+      titulo: "Livro C",
+      resumo: "Resumo do Livro C. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed luctus nulla. Donec mollis, velit id ultricies commodo, quam nulla lobortis tortor, ac faucibus eros ex non sapien.",
+      autores: ["Valdir Vulgado", "Karina Karão"]
     },
   ];
 

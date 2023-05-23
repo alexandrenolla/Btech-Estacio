@@ -1,9 +1,9 @@
 import Livro  from "../modelo/Livro";
 
 let livros: Livro[] = [
-  { codigo: 1, codEditora: 1, titulo: "Livro 1", resumo: "Resumo do Livro 1", autores: ["Autor 1", "Autor 2"] },
-  { codigo: 2, codEditora: 2, titulo: "Livro 2", resumo: "Resumo do Livro 2", autores: ["Autor 3", "Autor 4"] },
-  { codigo: 3, codEditora: 1, titulo: "Livro 3", resumo: "Resumo do Livro 3", autores: ["Autor 2", "Autor 4"] },
+  { codigo: 1, codigoEditora: 1, titulo: "Livro 1", resumo: "Resumo do Livro 1", autores: ["Autor 1", "Autor 2"] },
+  { codigo: 2, codigoEditora: 2, titulo: "Livro 2", resumo: "Resumo do Livro 2", autores: ["Autor 3", "Autor 4"] },
+  { codigo: 3, codigoEditora: 1, titulo: "Livro 3", resumo: "Resumo do Livro 3", autores: ["Autor 2", "Autor 4"] },
 ];
 
 export default class ControleLivro {

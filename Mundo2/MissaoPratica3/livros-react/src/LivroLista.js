@@ -12,14 +12,14 @@ function LivroLista() {
 
     return (
         <main className="container">
-            <h1>Catálogo de Livros </h1>
+            <h1>Catálogo de Livros</h1>
             <table className="table table-striped w-3/4">
                 <thead className="bg-dark text-left text-white text-sm font-light">
                     <tr >
                         <th>Título</th>
-                        <th>Resumo</th>
-                        <th>Editora</th>
                         <th>Autores</th>
+                        <th>Editora</th>
+                        <th>Resumo</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,7 +34,7 @@ function LivroLista() {
                                 </button>
                             </td>
                             <td>{livro.resumo}</td>
-                            <td>{ControleEditora.getNomeEditora(livro.codEditora)}</td>
+                            <td>{ControleEditora.getNomeEditora(livro.codigoEditora)}</td>
                             <td>
                                 {livro.autores.map((autor, index) => (
                                     <li key={index}>{autor}</li>

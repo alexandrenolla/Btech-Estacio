@@ -13,7 +13,7 @@ function App(){
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Catálogo</Link>
+                <Link className="nav-link" to="/">Catalogo</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/livro-dados">Novo</Link>

@@ -1,5 +1,5 @@
 body{
-    padding: 30px;
+    padding: 50px;
 }
 
 input#valor, button#add, div#selectOpcoes{ 
@@ -7,7 +7,7 @@ input#valor, button#add, div#selectOpcoes{
 }
 
 form, div#selectOpcoes{
-    margin: 15px 0px 15px 0px;
+    margin: 20px 0px 20px 0px;
 }
 
 

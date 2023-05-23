@@ -9,7 +9,7 @@ import Livro from './modelo/Livro';
 function LivroDados() {
 
     const opcoes = ControleEditora.getEditoras().map(editora => ({
-        value: editora.codEditora,
+        value: editora.codigoEditora,
         text: editora.nome
     }));
 
@@ -33,7 +33,7 @@ function LivroDados() {
     
       return (
         <main>
-          <h1>Dados do Livro</h1>
+          <h1>Sobre o Livro</h1>
           <form onSubmit={incluir}>
             <div className="form-group">
               <label htmlFor="titulo">Título</label>

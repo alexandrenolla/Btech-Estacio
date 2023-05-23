@@ -9,15 +9,15 @@ export class ControleEditoraService {
   editoras: Array<Editora> = [
     {
       codEditora: 1,
-      nome: "Editora A"
+      nome: "Editora 1"
     },
     {
       codEditora: 2,
-      nome: "Editora B"
+      nome: "Editora 2"
     },
     {
       codEditora: 3,
-      nome: "Editora C"
+      nome: "Editora 3"
     }
   ];
 

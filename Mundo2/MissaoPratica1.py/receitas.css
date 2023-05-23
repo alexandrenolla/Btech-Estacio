@@ -21,6 +21,7 @@ img.logo{
 /* BODY */
 body{
     overflow-y: scroll;
+    background-color: rgb(239, 184, 18);
 }
 
 /* DIV RECEITAS */
@@ -31,7 +32,7 @@ div.row{
 }
 div.row  div.card {
     margin: 0px 50px 50px 50px;
-    background-color: #4ecdc555;
+    background-color: #abc10955;
     border-radius: 10px;
     text-align: center;
     display: flex;

@@ -1,10 +1,10 @@
 // Function Swap -------------------------------------------------------------------------------------------------------------------
 const swap = (vetor, pos1, pos2) => {
-  // Valor da posição 1
+  
   const valorPos1 = vetor[pos1]
-  // Atribuindo o valor da posição 2 para a posição 1
+  
   vetor[pos1] = vetor[pos2]
-  // Atribuindo o valor salvo da posição 1 para a posição 2
+  
   vetor[pos2] = valorPos1
   return vetor
 }
@@ -15,10 +15,10 @@ console.log(`Função Swap: ${vetorSwap}`)
 // Function Shuffle ----------------------------------------------------------------------------------------------------------------
 const shuffle = (vetor, numTrocas) => {
   for (let i = 0; i < numTrocas; i++) {
-    // Escolhe dois índices aleatórios
+    
     const index1 = Math.floor(Math.random() * vetor.length);
     const index2 = Math.floor(Math.random() * vetor.length);
-    // Troca os elementos nos índices escolhidos
+    
     [vetor[index1], vetor[index2]] = [vetor[index2], vetor[index1]];
   }
   return vetor
@@ -55,7 +55,7 @@ const selectionSort = (vetor) => {
         minIndex = j;
       }
     }
-    // Troca os valores das posições i e minIndex, se necessário
+    
     if (i !== minIndex) {
       let temp = vetor[i];
       vetor[i] = vetor[minIndex];

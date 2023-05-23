@@ -5,7 +5,7 @@
 
 /* BODY */
 body{
-    background-color: #F7FFF7;
+    background-color: rgba(190, 103, 3, 0.778);
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -36,8 +36,9 @@ input#cadastro{
     margin-top: 46px;
     margin-left: 30px;
     border-radius: 10px;
-    background-color: #BDE4A8;
+    background-color: #1d2108;
     font-size: 14px;
+    color: white;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.339);
 }
 

@@ -17,7 +17,7 @@ export default function LivroDados() {
 
     const opcoes = ControleEditora.getEditoras().map(editora => {
         return {
-            value: editora.codEditora.toString(),
+            value: editora.codigoEditora.toString(),
             text: editora.nome
         }
     });
@@ -47,7 +47,7 @@ export default function LivroDados() {
             titulo,
             resumo,
             autores: autores.split('\n'),
-            codEditora
+            codigoEditora: codEditora
         };
         incluirLivro(livro).then(success => {
             if (success) {

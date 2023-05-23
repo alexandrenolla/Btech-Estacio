@@ -1,9 +1,9 @@
 export class Editora {
-    codEditora: number;
+    codigoEditora: number;
     nome: string;
   
     constructor(codEditora: number, nome: string) {
-      this.codEditora = codEditora;
+      this.codigoEditora = codEditora;
       this.nome = nome;
     }
 }
