@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CadastroPooApplication<CadastroPOO>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "CadastroPOO.CadastroPooApplication",
+            "projectName": "CadastroPOO",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
