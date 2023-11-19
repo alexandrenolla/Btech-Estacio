@@ -20,6 +20,66 @@ public class CadastroPooApplication {
     private static final PessoaJuridicaRepository pessoaJuridicaRepository = new PessoaJuridicaRepository();
 
     public static void main(String[] args) {
+
+        PessoaFisicaRepository repo1 = new PessoaFisicaRepository();
+        PessoaFisicaRepository repo2 = new PessoaFisicaRepository();
+        PessoaJuridicaRepository repo3 = new PessoaJuridicaRepository();
+        PessoaJuridicaRepository repo4 = new PessoaJuridicaRepository();
+
+        // Adicionar pessoas físicas a repo1
+        repo1.inserir(new PessoaFisica(1, "Ana", "11111111111", 25));
+        repo1.inserir(new PessoaFisica(2, "Carlos", "2222222222", 52));
+
+        // Persistir dados de repo1 em um arquivo fixo
+        try {
+            repo1.persistir("dados_pessoas_fisicas.ser");
+            System.out.println("Dados de Pessoa Fisica Armazenados.");
+        } catch (IOException e) {
+            System.out.println("Erro ao persistir dados de Pessoa Fisica: " + e.getMessage());
+        }
+
+        // Recuperar dados para repo2 do mesmo arquivo
+        try {
+            repo2.recuperar("dados_pessoas_fisicas.ser");
+            System.out.println("Dados de Pessoa Fisica Recuperados.");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Erro ao recuperar dados de Pessoa Fisica: " + e.getMessage());
+        }
+
+        // Exibir dados de todas as pessoas físicas recuperadas em repo2
+        ArrayList<PessoaFisica> pessoasFisicasRecuperadas = repo2.obterTodos();
+        for (PessoaFisica pessoaFisica : pessoasFisicasRecuperadas) {
+            pessoaFisica.exibir();
+        }
+
+        // Adicionar pessoas jurídicas a repo3
+        repo3.inserir(new PessoaJuridica(3, "XPTO Sales", "3333333333"));
+        repo3.inserir(new PessoaJuridica(4, "XPTO Solutions", "4444444444"));
+
+        // Persistir dados de repo3 em um arquivo fixo
+        try {
+            repo3.persistir("dados_pessoas_juridicas.ser");
+            System.out.println("Dados de Pessoa Juridica Armazenados.");
+        } catch (IOException e) {
+            System.out.println("Erro ao persistir dados de Pessoa Juridica: " + e.getMessage());
+        }
+
+        // Recuperar dados para repo4 do mesmo arquivo
+        try {
+            repo4.recuperar("dados_pessoas_juridicas.ser");
+            System.out.println("Dados de Pessoa Juridica Recuperados.");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Erro ao recuperar dados de Pessoa Juridica: " + e.getMessage());
+        }
+
+        // Exibir dados de todas as pessoas jurídicas recuperadas em repo4
+        ArrayList<PessoaJuridica> pessoasJuridicasRecuperadas = repo4.obterTodos();
+        for (PessoaJuridica pessoaJuridica : pessoasJuridicasRecuperadas) {
+            pessoaJuridica.exibir();
+        }
+
+
+        // Menu //
         int escolha;
 
         do {
