@@ -184,7 +184,9 @@ public class CadastroDbApplication {
 
     private char escolherTipoPessoa(Scanner scanner) {
         System.out.print("F - Pessoa Fisica | J - Pessoa Juridica: ");
-        return scanner.next().charAt(0);
+        char opcao = scanner.next().charAt(0);
+        scanner.nextLine(); 
+        return opcao;
     }
 
     private void preencherDadosPessoaFisica(PessoaFisica pessoa, Scanner scanner) {

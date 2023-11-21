@@ -90,8 +90,9 @@ public class PessoaJuridicaDAO {
                 throw new SQLException("Falha ao obter o ID da Pessoa.");
             }
         } catch (SQLException e) {
+            System.err.println("Erro ao executar SQL: " + e.getMessage());
             e.printStackTrace();
-        }
+        }    
     }
 
     public void alterar(PessoaJuridica pessoa) {

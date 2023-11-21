@@ -89,6 +89,7 @@ public class PessoaFisicaDAO {
                 }
             }
         } catch (SQLException e) {
+            System.err.println("Erro ao executar SQL: " + e.getMessage());
             e.printStackTrace();
         }
     }
