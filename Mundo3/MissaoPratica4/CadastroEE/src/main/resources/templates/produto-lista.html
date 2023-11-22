@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Produtos</title>
+    <title>Listagem de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
-    <h2>Lista de Produtos</h2>
-    <table border="1">
-        <thead>
+<body class="container">
+    <h2>Listagem de Produtos</h2>
+    <a class="btn btn-primary m-2" th:href="@{/produtos/formulario}">Novo Produto</a>
+    <br>
+    <table class="table table-striped">
+        <thead class="table-dark">
             <tr>
-                <th>ID</th>
+                <th>#</th>
                 <th>Nome</th>
                 <th>Quantidade</th>
-                <th>Preço</th>
-                <th>Ações</th>
+                <th>Preço de Venda</th>
+                <th>Opções</th>
             </tr>
         </thead>
         <tbody>
@@ -24,14 +27,11 @@
                 <td th:text="${produto.quantidade}"></td>
                 <td th:text="${produto.preco}"></td>
                 <td>
-                    <a th:href="@{/produtos/editar/{id}(id=${produto.id})}">Editar</a>
-                    |
-                    <a th:href="@{/produtos/excluir/{id}(id=${produto.id})}">Excluir</a>
+                    <a class="btn btn-primary btn-sm" th:href="@{/produtos/editar/{id}(id=${produto.id})}">Alterar</a>
+                    <a class="btn btn-danger btn-sm" th:href="@{/produtos/excluir/{id}(id=${produto.id})}">Excluir</a>
                 </td>
             </tr>
         </tbody>
     </table>
-    <br>
-    <a th:href="@{/produtos/formulario}">Novo Produto</a>
 </body>
 </html>
