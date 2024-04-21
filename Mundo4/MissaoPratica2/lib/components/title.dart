@@ -27,7 +27,7 @@ class TitleSection extends StatelessWidget {
                   child: Text(
                     title,
                     style: const TextStyle(
-                      fontWeight: FontWeight.light,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),

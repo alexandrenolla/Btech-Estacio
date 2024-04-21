@@ -31,7 +31,7 @@ class SobrePage extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.light,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
