@@ -51,7 +51,7 @@ const cadastrar = ({ atualizarListaFornecedores }) => {
 
     return (
         <View style={{ padding: 20 }}>
-            <Text style={{ fontFamily: 'Monospace', fontSize: 14, color: 'white', paddingBottom: 10 }}>
+            <Text style={{ fontFamily: 'Monospace', fontSize: 14, color: 'black', paddingBottom: 10 }}>
                 Nome</Text>
             <TextInput
                 value={fornecedor.nome}
@@ -59,7 +59,7 @@ const cadastrar = ({ atualizarListaFornecedores }) => {
                 style={{ backgroundColor: 'white', borderRadius: 5, color: 'green', borderWidth: 1, borderColor: 'blue', marginBottom: 10, padding: 5,  textDecorationLine: 'none' }}
             />
 
-            <Text style={{ fontFamily: 'Monospace', fontSize: 14, color: 'white', paddingBottom: 10 }}>
+            <Text style={{ fontFamily: 'Monospace', fontSize: 14, color: 'black', paddingBottom: 10 }}>
                 Endereço</Text>
             <TextInput
                 value={fornecedor.endereco}
@@ -67,15 +67,15 @@ const cadastrar = ({ atualizarListaFornecedores }) => {
                 style={{ backgroundColor: 'white', borderRadius: 5, color: 'green', borderWidth: 1, borderColor: 'blue', marginBottom: 10, padding: 10,  textDecorationLine: 'none' }}
             />
 
-            <Text style={{ fontFamily: 'Monospace', fontSize: 14, color: 'white', paddingBottom: 10 }}>
+            <Text style={{ fontFamily: 'Monospace', fontSize: 14, color: 'black', paddingBottom: 10 }}>
                 Contato</Text>
             <TextInput
                 value={fornecedor.contato}
                 onChangeText={text => setFornecedor({ ...fornecedor, contato: text })}
-                style={{ backgroundColor: 'white', borderRadius: 5, color: 'blue', borderWidth: 1, borderColor: 'blue', marginBottom: 20, padding: 10,  textDecorationLine: 'none' }}
+                style={{ backgroundColor: 'white', borderRadius: 5, color: 'green', borderWidth: 1, borderColor: 'blue', marginBottom: 20, padding: 10,  textDecorationLine: 'none' }}
             />
 
-            <Text style={{ fontFamily: 'Monospace', fontSize: 14, color: 'white', paddingBottom: 10 }}>
+            <Text style={{ fontFamily: 'Monospace', fontSize: 14, color: 'black', paddingBottom: 10 }}>
                 Categorias</Text>
             <TextInput
                 value={fornecedor.categorias}

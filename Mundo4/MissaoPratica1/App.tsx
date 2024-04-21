@@ -12,7 +12,7 @@ const App = () => {
   };
 
   return (
-    <View style={{flex: 1, display: 'flex', flexDirection: 'column', gap: 20, paddingTop: 40, backgroundColor: 'black' }}>
+    <View style={{flex: 1, display: 'flex', flexDirection: 'column', gap: 20, paddingTop: 40, backgroundColor: 'white' }}>
       <Header></Header>
       
       <Cadastro atualizarListaFornecedores={handleCadastroSucesso} ></Cadastro>

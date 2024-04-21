@@ -27,17 +27,17 @@ const ListaFornecedores = () => {
     }, []);
 
     return (
-        <View style={{  flex: 1, padding: 20 }}>
-            <Text style={{ fontFamily: 'Monospace', fontSize: 20, color: 'white', paddingBottom: 10 }}>
-                Lista de Fornecedores</Text>
+        <View style={{  flex: 1, padding: 40 }}>
+            <Text style={{ fontFamily: 'Monospace', fontSize: 28, color: 'black', paddingBottom: 10, textAlign: 'center'}}>
+                Fornecedores</Text>
             <FlatList
                 data={fornecedores}
                 renderItem={({ item }) => (
-                    <View style={{ marginBottom: 10, backgroundColor: 'white', padding: 5 }}>
-                        <Text style={{ fontFamily: 'Monospace', fontSize: 14 }}>Nome: {item.nome}</Text>
-                        <Text style={{ fontFamily: 'Monospace', fontSize: 14 }}>Endereço: {item.endereco}</Text>
-                        <Text style={{ fontFamily: 'Monospace', fontSize: 14 }}>Contato: {item.contato}</Text>
-                        <Text style={{ fontFamily: 'RobMonospaceoto', fontSize: 14 }}>Categorias: {item.categorias}</Text>
+                    <View style={{ marginBottom: 10, backgroundColor: 'black', padding: 5 }}>
+                        <Text style={{ fontFamily: 'Monospace', fontSize: 14, color: 'white' }}>Nome: {item.nome}</Text>
+                        <Text style={{ fontFamily: 'Monospace', fontSize: 14, color: 'white' }}>Endereço: {item.endereco}</Text>
+                        <Text style={{ fontFamily: 'Monospace', fontSize: 14, color: 'white' }}>Contato: {item.contato}</Text>
+                        <Text style={{ fontFamily: 'RobMonospaceoto', fontSize: 14, color: 'white' }}>Categorias: {item.categorias}</Text>
                     </View>
                 )}
                 keyExtractor={item => item.id.toString()}
