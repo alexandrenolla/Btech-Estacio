@@ -5,14 +5,14 @@ class PacotesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color bgAppBar = const Color(0xFF008584);
-    Color bgBody = const Color(0xFFE0E0E0); 
+  Color bgAppBar = Color.fromARGB(144, 0, 255, 68);
+  Color bgBody = const Color(0xFFE0E0E0); 
 
     return Scaffold(
       appBar: AppBar(
         title: const Text(
           'Pacotes de Viagem',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black),
         ),
         backgroundColor: bgAppBar,
       ),
@@ -46,11 +46,12 @@ class PacotesPage extends StatelessWidget {
 
   Widget _buildPacote({required String tipo, required String descricao, required String preco}) {
     return Container(
+      width: 400,
       margin: const EdgeInsets.only(bottom: 20),
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(40),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
+        color: Color.fromARGB(184, 88, 88, 90),
+        borderRadius: BorderRadius.circular(3),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,24 +59,26 @@ class PacotesPage extends StatelessWidget {
           Text(
             tipo,
             style: const TextStyle(
-              fontSize: 20,
+              fontSize: 16,
               fontWeight: FontWeight.bold,
+              color: Colors.white,
             ),
           ),
           const SizedBox(height: 5),
           Text(
             descricao,
             style: const TextStyle(
-              fontSize: 20,
+              fontSize: 12,
+               color: Colors.white,
             ),
           ),
           const SizedBox(height: 5),
           Text(
             'Preço: $preco',
             style: const TextStyle(
-              fontSize: 16,
+              fontSize: 12,
               fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 86, 33, 243), 
+              color: Colors.black
             ),
           ),
         ],

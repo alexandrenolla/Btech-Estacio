@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'views/homepage.dart'; 
+import 'views/inicio.dart'; 
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Missao Prática 2',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
-      home: const HomePage(), 
+      home: const Inicio(), 
     );
   }
 }
